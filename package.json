@@ -20,6 +20,7 @@
     "mongodb": "^2.2.16",
     "mongoose": "^6.8.1",
     "node-localstorage": "^2.2.1",
+    "node-localStorage": "^0.0.1",
     "validator": "^13.7.0"
   },
   "devDependencies": {
