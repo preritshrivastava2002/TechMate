@@ -24,7 +24,7 @@ export default function MyQuestions() {
     
 
     const fetchAllFilteredQuestions = async () => {
-        const response = await fetch(`http://localhost:5000/api/question/fetchUserFilteredQuestions/${localStorage.getItem("username")}`, {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/question/fetchUserFilteredQuestions/${localStorage.getItem("username")}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -38,7 +38,7 @@ export default function MyQuestions() {
 
     const [usedTags, setUsedTags] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/api/question/usedtags/${localStorage.getItem("username")}`, {
+        fetch(`https://techmate-backend.onrender.com/api/question/usedtags/${localStorage.getItem("username")}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ export default function MyQuestions() {
     }, [filters])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/question/fetchUserQuestions/${localStorage.getItem("username")}`, {
+        fetch(`https://techmate-backend.onrender.com/api/question/fetchUserQuestions/${localStorage.getItem("username")}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

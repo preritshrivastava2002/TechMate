@@ -11,6 +11,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 
+
 export default function Adminquestion() {
 
     const [filters, setFilters] = useState({ startDate: "", endDate: "", tags: "" });
@@ -37,7 +38,7 @@ export default function Adminquestion() {
      const paginate = pageNum => setcurrentPage(pageNum);
     
     const fetchAllFilteredQuestions = async () => {
-        const response = await fetch(`http://localhost:5000/api/question/fetchUserFilteredQuestions`, {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/question/fetchUserFilteredQuestions`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -50,7 +51,7 @@ export default function Adminquestion() {
         setFilteredQue(data);
     };
     useEffect(() => {
-        fetch(`http://localhost:5000/api/question/usedtags`, {
+        fetch(`https://techmate-backend.onrender.com/api/question/usedtags`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -65,7 +66,7 @@ export default function Adminquestion() {
     }, [filters])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/question/fetchquestions`, {
+        fetch(`https://techmate-backend.onrender.com/api/question/fetchquestions`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -79,7 +80,7 @@ export default function Adminquestion() {
 
       // This function will find the count of No. of answer for a perticular Question
       const FindFrequencyOfAns = async () => {
-        const response = await fetch("http://localhost:5000/api/answer/findNumberOfAns", {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/answer/findNumberOfAns`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -93,7 +94,7 @@ export default function Adminquestion() {
     }
 
     const fetchAllQuestions = async () => {
-        await fetch("http://localhost:5000/api/question/fetchquestions", {
+        await fetch(`https://techmate-backend.onrender.com/api/question/fetchquestions`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -109,7 +110,7 @@ export default function Adminquestion() {
     
     const fetchVotes = async()=>{
 
-        const response = await fetch(`http://localhost:5000/api/question/fetchallVotes`, {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/question/fetchallVotes`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -122,7 +123,7 @@ export default function Adminquestion() {
     }
 
     const deleteQuestion = async (id) => {
-        const response = await fetch(`http://localhost:5000/api/question/deleteque/${id}`, {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/question/deleteque/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

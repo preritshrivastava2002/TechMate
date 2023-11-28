@@ -14,7 +14,7 @@ export default function Posts({ posts }) {
     const [state, setState] = useState(false);
 
     const deleteQue = async (id) => {
-        const response = await fetch(`http://localhost:5000/api/question/deleteque/${id}`, {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/question/deleteque/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ export default function Posts({ posts }) {
 
     // This function will find the count of No. of answer for a perticular Question
     const FindFrequencyOfAns = async () => {
-        const response = await fetch("http://localhost:5000/api/answer/findNumberOfAns", {
+        const response = await fetch("https://techmate-backend.onrender.com/api/answer/findNumberOfAns", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ export default function Posts({ posts }) {
 
     const fetchVotes = async () => {
 
-        const response = await fetch(`http://localhost:5000/api/question/fetchallVotes`, {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/question/fetchallVotes`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

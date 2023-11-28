@@ -13,7 +13,7 @@ export default function Posts({ posts }) {
 
     const fetchVotes = async () => {
 
-        const response = await fetch(`http://localhost:5000/api/answer/fetchVotes`, {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/answer/fetchVotes`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ export default function Posts({ posts }) {
     }
 
     const deleteAnswer = async (id) => {
-        const response = axios.delete(`http://localhost:5000/api/admin/deleteanswer/${id}`, {
+        const response = axios.delete(`https://techmate-backend.onrender.com/api/admin/deleteanswer/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

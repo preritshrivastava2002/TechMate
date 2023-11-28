@@ -23,7 +23,7 @@ export default function Questions() {
 
     // fetch all the questions
     const fetchAllQuestions = async () => {
-        await fetch("http://localhost:5000/api/question/fetchquestions", {
+        await fetch("https://techmate-backend.onrender.com/api/question/fetchquestions", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -38,7 +38,7 @@ export default function Questions() {
 
     // Function to sort questions by higher votes question displays first
     const sortByVotes = async () => {
-        await fetch("http://localhost:5000/api/question/fetchQueByHigherVotes", {
+        await fetch("https://techmate-backend.onrender.com/api/question/fetchQueByHigherVotes", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -51,7 +51,7 @@ export default function Questions() {
     // Function to filter all the questions which are answered.
 
     const answeredQuestions = async()=>{
-        await fetch("http://localhost:5000/api/question/answeredQue", {
+        await fetch("https://techmate-backend.onrender.com/api/question/answeredQue", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -62,7 +62,7 @@ export default function Questions() {
     }
 
     const unansweredQuestions = async() => {
-        await fetch("http://localhost:5000/api/question/unansweredQue", {
+        await fetch("https://techmate-backend.onrender.com/api/question/unansweredQue", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

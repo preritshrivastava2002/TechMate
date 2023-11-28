@@ -6,6 +6,7 @@ import  AdminSidebar  from '../Admin/AdminSidebar';
 import axios from "axios";
 import { Tag } from "@mui/icons-material";
 
+
 export default function AdminHome() {
     const [user, setUser] = useState(0);
     const [question, setQuestion] = useState(0);
@@ -16,7 +17,7 @@ export default function AdminHome() {
     const [chartInstance, setChartInstance] = useState(null);
 
     const noOfusers =  async () => {
-        await fetch('http://localhost:5000/api/admin/noOfUsers', {
+        await fetch(`https://techmate-backend.onrender.com/api/admin/noOfUsers`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -35,7 +36,7 @@ export default function AdminHome() {
     const [Tags, setTags] = useState([]);
     const [count, setCount] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/api/question/fetchquestions`, {
+        fetch(`https://techmate-backend.onrender.com/api/question/fetchquestions`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

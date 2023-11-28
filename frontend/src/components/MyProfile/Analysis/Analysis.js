@@ -19,7 +19,7 @@ export default function Analysis() {
     const [queLen, setQueLen] = useState(0);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/question/fetchUserQuestions/${localStorage.getItem("username")}`, {
+        fetch(`https://techmate-backend.onrender.com/api/question/fetchUserQuestions/${localStorage.getItem("username")}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -90,7 +90,7 @@ export default function Analysis() {
     const [actAnsLen, setactAnsLen] = useState(0);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/answer/fetchUserAcceptedAnsweredQuestions/${localStorage.getItem("username")}`, {
+        fetch(`https://techmate-backend.onrender.com/api/answer/fetchUserAcceptedAnsweredQuestions/${localStorage.getItem("username")}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -162,7 +162,7 @@ export default function Analysis() {
     const [Anscount, setAnsCount] = useState([]);
     const [ansLen, setansLen] = useState(0);
     useEffect(() => {
-        fetch(`http://localhost:5000/api/answer/fetchUserAnsweredQuestions/${localStorage.getItem("username")}`, {
+        fetch(`https://techmate-backend.onrender.com/api/answer/fetchUserAnsweredQuestions/${localStorage.getItem("username")}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

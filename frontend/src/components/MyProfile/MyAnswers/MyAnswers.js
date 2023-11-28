@@ -22,7 +22,7 @@ export default function Profile() {
     const [currentPage, setcurrentPage] = useState(1);
 
     const fetchAllFilteredAnswers = async () => {
-        const response = await fetch(`http://localhost:5000/api/answer/fetchUserFilteredAnswers/${localStorage.getItem("username")}`, {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/answer/fetchUserFilteredAnswers/${localStorage.getItem("username")}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ export default function Profile() {
 
     const [usedTags, setUsedTags] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/api/answer/givenAnswersTags/${localStorage.getItem("username")}`, {
+        fetch(`https://techmate-backend.onrender.com/api/answer/givenAnswersTags/${localStorage.getItem("username")}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ export default function Profile() {
 
     // This function will find the No. of answers given by a User
     useEffect(() => {
-        fetch(`http://localhost:5000/api/answer/fetchUserAnswers/${localStorage.getItem("username")}`, {
+        fetch(`https://techmate-backend.onrender.com/api/answer/fetchUserAnswers/${localStorage.getItem("username")}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

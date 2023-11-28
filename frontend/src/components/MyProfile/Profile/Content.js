@@ -26,7 +26,7 @@ export default function Content(props) {
     const fetchQuestion = async (id) => {
 
        
-        await fetch(`http://localhost:5000/api/question/fetchQueById/${id}`, {
+        await fetch(`https://techmate-backend.onrender.com/api/question/fetchQueById/${id}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ export default function Content(props) {
     }
 
     const fetchAnswers = async (id) => {
-        await fetch(`http://localhost:5000/api/answer/fetchanswer/${id}`, {
+        await fetch(`https://techmate-backend.onrender.com/api/answer/fetchanswer/${id}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ export default function Content(props) {
             document.getElementById("upvote" + id).disabled = true;
             document.getElementById("downvote" + id).disabled = false;
 
-            const response = await fetch(`http://localhost:5000/api/answer/upvote/${id}`, {
+            const response = await fetch(`https://techmate-backend.onrender.com/api/answer/upvote/${id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -91,7 +91,7 @@ export default function Content(props) {
             document.getElementById("upvote" + id).disabled = false;
             document.getElementById("downvote" + id).disabled = true;
 
-            const response = await fetch(`http://localhost:5000/api/answer/downvote/${id}`, {
+            const response = await fetch(`https://techmate-backend.onrender.com/api/answer/downvote/${id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -110,7 +110,7 @@ export default function Content(props) {
 
     const fetchVotes = async () => {
 
-        const response = await fetch(`http://localhost:5000/api/answer/fetchVotes`, {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/answer/fetchVotes`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -126,7 +126,7 @@ export default function Content(props) {
     }
 
     const acceptAnswer = async(e, id) => {
-        const response = await fetch(`http://localhost:5000/api/answer/acceptanswer/${id}`, {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/answer/acceptanswer/${id}`, {
             method : 'POST',
             headers:{
                 'Content-Type':"application/json"

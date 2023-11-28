@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate, NavLink } from 'react-router-dom';
-
 import './Register.css'
 function Register() {
   const navigate = useNavigate();
@@ -19,7 +18,7 @@ function Register() {
     console.log(credentials.password);
 
     //   if(credentials.password != credentials.passwordConfirm){alert("re enter password")};
-    const response = await fetch('http://localhost:5000/api/auth/createuser', {
+    const response = await fetch(`https://techmate-backend.onrender.com/api/auth/createuser`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

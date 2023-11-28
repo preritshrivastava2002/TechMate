@@ -16,7 +16,7 @@ export default function UpdateAnswer() {
   const [state, setState] = useState(false);
 
   const fetchAnswer = async (id) => {
-    const response = await fetch(`http://localhost:5000/api/answer/userAnstoUpdate/${id}`, {
+    const response = await fetch(`https://techmate-backend.onrender.com/api/answer/userAnstoUpdate/${id}`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ export default function UpdateAnswer() {
 
     e.preventDefault();
 
-    let response = await fetch(`http://localhost:5000/api/answer/updateans/${id}`, {
+    let response = await fetch(`https://techmate-backend.onrender.com/api/answer/updateans/${id}`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

@@ -7,7 +7,7 @@ export default function ProfileHeader() {
     const [points, setPoints] = useState(0);
 
     const Points = async ()=>{
-        const response = await fetch("http://localhost:5000/api/answer/points",{
+        const response = await fetch("https://techmate-backend.onrender.com/api/answer/points",{
             method : "POST",
             headers : {
                 'Content-Type': "application/json"

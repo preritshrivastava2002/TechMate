@@ -21,7 +21,7 @@ export default function QuestionOnTags() {
     const [tagdescription, settagdesc] = useState({});
 
     const fetchQue = async (tagname) => {
-        await fetch(`http://localhost:5000/api/question/fetchQuePertag/${tagname}`, {
+        await fetch(`https://techmate-backend.onrender.com/api/question/fetchQuePertag/${tagname}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ export default function QuestionOnTags() {
     }
 
     const tagDesc = async (tagname) => {
-        await fetch(`http://localhost:5000/api/tag/tagdesc/${tagname}`, {
+        await fetch(`https://techmate-backend.onrender.com/api/tag/tagdesc/${tagname}`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

@@ -10,7 +10,7 @@ export default function Posts({ posts }) {
 
     const fetchVotes = async () => {
 
-        const response = await fetch(`http://localhost:5000/api/answer/fetchVotes`, {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/answer/fetchVotes`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ export default function Posts({ posts }) {
     }
 
     const deleteAns = async(id)=>{
-        const response = await fetch(`http://localhost:5000/api/answer/deleteans/${id}`, {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/answer/deleteans/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

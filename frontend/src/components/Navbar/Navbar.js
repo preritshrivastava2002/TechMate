@@ -67,7 +67,7 @@ export default function Navbar() {
     e.preventDefault();
     const que = document.getElementById('searchQue').value;
 
-    await fetch(`http://localhost:5000/api/question/search?keyword=${que}`, {
+    await fetch(`https://techmate-backend.onrender.com/api/question/search?keyword=${que}`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

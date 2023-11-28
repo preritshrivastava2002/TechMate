@@ -18,7 +18,7 @@ export default function UpdateQuestion(props) {
     
 
     const fetchQuestion= async(id)=>{
-        const response = await fetch(`http://localhost:5000/api/question/fetchQueById/${id}`, {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/question/fetchQueById/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ export default function UpdateQuestion(props) {
     const updateQue = async(e, id)=>{
         e.preventDefault();
 
-        const response = await fetch(`http://localhost:5000/api/question/updateque/${id}`, {
+        const response = await fetch(`https://techmate-backend.onrender.com/api/question/updateque/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
