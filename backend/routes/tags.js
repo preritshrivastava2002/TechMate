@@ -3,9 +3,6 @@ const express = require('express');
 const Tags = require("../models/Tags");
 const fetchuser = require('../middleware/fetchuser');
 
-const LocalStorage = require('node-localStorage').LocalStorage;
-var localStorage = new LocalStorage('./scratch');
-
 const router = express.Router();
 
 router.post("/addtag", async(req, res)=>{

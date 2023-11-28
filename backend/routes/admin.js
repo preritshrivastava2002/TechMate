@@ -3,7 +3,7 @@ const Admin = require("../models/Admin");
 const User = require("../models/User");
 const router = express.Router();
 
-const LocalStorage = require('node-localStorage').LocalStorage;
+const {LocalStorage} = require('node-localStorage').LocalStorage;
 var localStorage = new LocalStorage('./scratch');
 
 const { body, validationResult } = require('express-validator');

@@ -1,4 +1,4 @@
-const LocalStorage = require('node-localStorage').LocalStorage;
+const {LocalStorage} = require('node-localStorage').LocalStorage;
 var localStorage = new LocalStorage('./scratch');
 var jwt  = require('jsonwebtoken');
 const JWT_SECRET = 'Prerit';
